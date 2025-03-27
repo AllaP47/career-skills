@@ -49,15 +49,13 @@ img {
   justify-content: center;
 }
 .information {
-  max-width: 400px;
+  max-width: 500px;
   height: auto;
   display: flex;
   flex-direction: column;
-  text-align: center;
-  left: auto;
-  margin-right: 100px;
+
+  padding-right: 100px;
   text-align: left;
-  background-color: bisque;
 }
 
 .property {
@@ -69,4 +67,13 @@ img {
   right: auto;
   text-align: left;
   padding-top: 48px;
+  padding-left: 100px;
+}
+.my-name {
+  font-size: 4em;
+  text-align: center;
+}
+.rol {
+  font-size: 1.5em;
+  text-align: center;
 }
