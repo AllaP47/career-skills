@@ -54,7 +54,7 @@ img {
   display: flex;
   flex-direction: column;
 
-  padding-right: 100px;
+  padding-right: 50px;
   text-align: left;
 }
 
@@ -66,14 +66,24 @@ img {
   text-align: center;
   right: auto;
   text-align: left;
-  padding-top: 48px;
-  padding-left: 100px;
+
+  padding-left: 50px;
+}
+.person {
+  padding-bottom: 24px;
 }
 .my-name {
-  font-size: 4em;
-  text-align: center;
+  font-size: 3em;
+  text-align: left;
+  margin: 16px 0;
 }
 .rol {
   font-size: 1.5em;
-  text-align: center;
+  text-align: left;
+}
+.section-summary {
+  padding-bottom: 24px;
+}
+.section-project {
+  padding-bottom: 24px;
 }
