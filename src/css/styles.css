@@ -1,9 +1,144 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-/* Common styles */
-@import url('./reset.css');
-@import url('./base.css');
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  background-color: #ffffff;
+  color: #434455;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: center;
+}
+p {
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+ul {
+  /* list-style-type: none; */
+  margin: 0;
+  padding: 0;
+  list-style: disc;
+  padding-left: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+#pdf-content {
+  min-height: 120vh;
+}
+html,
+body {
+  overflow: visible !important;
+}
+
+@media print {
+  body,
+  html {
+    width: 100%;
+    height: auto;
+  }
+
+  #pdf-content {
+    width: 100%;
+    max-width: 800px;
+    padding: 10px;
+  }
+
+  .container-summary {
+    display: block;
+    width: 100%;
+  }
+
+  .information,
+  .property {
+    width: 100%;
+  }
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 47%;
+
+  max-width: 100px;
+  height: auto;
+}
+.container-summary {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.section-summary,
+.section-project,
+.section-education {
+  page-break-inside: avoid;
+}
+.section-language,
+.section-education {
+  page-break-before: auto;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+.information,
+.property {
+  width: 48%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.information {
+  width: 50%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+
+  padding-right: 50px;
+  text-align: left;
+}
+
+.property {
+  max-width: 50%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  right: auto;
+  text-align: left;
+
+  padding-left: 50px;
+}
+.person {
+  padding-bottom: 60px;
+}
+.my-name {
+  font-size: 3em;
+  text-align: left;
+  margin: 16px 0;
+  padding-right: 40px;
+}
+.rol {
+  font-size: 1.5em;
+  text-align: left;
+}
+.section-summary {
+  padding-bottom: 24px;
+}
+.section-project {
+  padding-bottom: 24px;
+}

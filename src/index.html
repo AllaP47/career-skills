@@ -2,29 +2,153 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>Document</title>
+
     <link rel="stylesheet" href="./css/styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   </head>
   <body>
-    <main>
-      <form class="form">
-        <label>
-          <input
-            type="text"
-            name="search-text"
-            placeholder="Search images..."
-            required
+    <div id="pdf-content">
+      <main class="container-summary">
+        <section class="information">
+          <img
+            src="./img/fsm_user_image_1740738464493~3.jpg"
+            alt="My foto"
+            width="300px"
+            height="300px"
           />
-        </label>
-        <button type="submit">Search</button>
-      </form>
-      <div class="loader">Loading...</div>
-      <ul class="gallery"></ul>
-      <button class="load-more">Load More</button>
-    </main>
+          <div class="section-contact">
+            <h2>CONTACTS</h2>
 
-    <script type="module" src="./main.js"></script>
+            <p>📞 Phone: +38 (096) 440-1339</p>
+            <p>
+              ✉️ Email:
+              <a href="mailto:allapaschinska1@gmail.com"
+                >allapaschinska1@gmail.com</a
+              >
+            </p>
+            <p>🔗 <a href="https://linkedin.com/in/yourprofile">LinkedIn</a></p>
+            <p>
+              🔗 <a href="https://web.telegram.org/k/#@PAllaV47">Telegram</a>
+            </p>
+            <p>🔗 <a href="https://github.com/AllaP47">GitHub</a></p>
+            <p>📍 Location: Kiev, Ukraine</p>
+          </div>
+
+          <div class="section-tech">
+            <h2>TECH SKILLS</h2>
+            <ul>
+              <li>JavaScript (ES6+), HTML, CSS</li>
+              <li>Node.js, Express.js</li>
+              <li>REST API, Axios</li>
+              <li>Git, GitHub</li>
+              <li>Webpack, Vite</li>
+              <li>iziToast, SimpleLightbox, css-loader</li>
+              <li>Agile methodologies (Scrum, Kanban)</li>
+            </ul>
+          </div>
+
+          <div class="section-soft">
+            <h2>SOFT SKILLS</h2>
+            <ul>
+              <li>Problem-solving</li>
+              <li>Teamwork & collaboration</li>
+              <li>Communication skills</li>
+              <li>Time management</li>
+              <li>Adaptability</li>
+            </ul>
+          </div>
+          <div
+            class="section-language"
+            style="display: block; min-height: 50px"
+          >
+            <h2>LANGUAGES</h2>
+            <ul>
+              <li>English - elementary</li>
+              <li>Ukrainian - native</li>
+            </ul>
+          </div>
+        </section>
+        <section class="property">
+          <div class="person">
+            <h2 class="my-name">Paschinska Alla</h2>
+            <p class="rol">Junior Frontend Developer</p>
+          </div>
+          <div class="section-summary">
+            <!-- <h2>SUMMARY</h2> -->
+            <p>
+              A motivated developer who is passionate about using web
+              technologies and constantly improving his skills. Experienced in
+              working with HTML, CSS, JavaScript and using REST APIs. Has
+              implemented small projects, including an image search application
+              using Pixabay API, Axios, iziToast, SimpleLightbox and a modular
+              approach to code.
+            </p>
+          </div>
+          <div class="section-project">
+            <h2>PROJECT EXPERIENCE</h2>
+            <ul>
+              <li>
+                <p>
+                  <a href="https://allap47.github.io/goit-js-hw-12/"
+                    >Image Search App</a
+                  >
+                  |
+                  <a href="https://github.com/AllaP47/goit-js-hw-12">GitHub</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  A web application for searching images using Pixabay API...
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="https://devscriber.github.io/freelance-artists/"
+                    >Group project</a
+                  >
+                  |
+                  <a href="https://github.com/DevScriber/freelance-artists"
+                    >GitHub</a
+                  >
+                </p>
+              </li>
+              <li>
+                <p>
+                  Description of another project with key features and
+                  technologies used.
+                </p>
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="section-education"
+            style="display: block; min-height: 50px"
+          >
+            <h2>EDUCATION</h2>
+            <ul>
+              <li>GoIT | Full-Stack Developer Program (2024 - 2025)</li>
+
+              <li>
+                Nikopol Economic University Name | Specialist's degree in
+                Management (2005 - 2011)
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
+    </div>
+    <button id="download-pdf">Завантажити PDF</button>
+    <script>
+      document
+        .getElementById('download-pdf')
+        .addEventListener('click', function () {
+          const element = document.getElementById('pdf-content');
+          html2pdf().from(element).save();
+        });
+    </script>
+    <script src="./main.js"></script>
   </body>
 </html>
